@@ -1,0 +1,11 @@
+stuff that would be cool: 
+- for breed: do a dropdown menu that is populated from some API or something 
+
+ISSUES: 
+- In edit, deleting images doesn't work 
+ 
+TO ADD: 
+- users, login, etc
+- form validation (this is probably partly done)
+- authentication 
+- deploy this shiz

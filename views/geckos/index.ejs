@@ -1,0 +1,27 @@
+<% layout('layouts/boilerplate')%>
+<div class="container">
+    <h1>All Geckos</h1>
+
+    <% for (let gecko of geckos){%>
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <%if(gecko.images.length) {%>
+                <img class="img-fluid" alt="" src="<%=gecko.images[0].url%>">
+                <% }else {%>
+                <img class="img-fluid" alt=""
+                    src="https://images.unsplash.com/photo-1559575918-c2ede2c34323?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=941&q=80">
+                <% } %>
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title"><%= gecko.name %> </h5>
+
+                    <p class="card-text"><%= gecko.description %></p>
+                    <a class="btn btn-primary" href="/geckos/<%=gecko._id%>">View <%=gecko.name%></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }%>
+</div>
